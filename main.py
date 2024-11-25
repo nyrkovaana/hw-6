@@ -13,3 +13,11 @@ if __name__ == '__main__':
         with open('funnel.csv', 'w', encoding='utf-8') as results_file:
             for line in log_file:
                 process_line(line, results_file)
+
+    with open('funnel.csv', 'r') as file:
+        counter = 0
+        for line in file:
+            print(line, end='')
+            counter += 1
+            if counter == 3: break
+
